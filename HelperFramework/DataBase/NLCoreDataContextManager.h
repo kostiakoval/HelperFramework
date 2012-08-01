@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface DataBase : NSObject
+@interface NLCoreDataContextManager : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *mainManagedObjectContext;
 
++ (void)dataBaseFileName:(NSString *)name;
 - (NSManagedObjectContext *)newLocalContext;
 - (void)saveContext:(NSManagedObjectContext*)context;
 @end
